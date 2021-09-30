@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Minecraft Vanilla Bedrock",
+    "name": "minecraft-vanilla-bedrock",
+    "image": " itzg/minecraft-bedrock-server",
+    "description": "Vanilla Minecraft bedrock server",
+    "categories": [
+      "Games"
+    ],
+    "platform": "linux",
+    "note": "",
+    "restart_policy": "always",
+    "ports": [
+      {
+        "GamePort": "25565:25565/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/data",
+        "bind": "minecraft-storage"
+      }
+    ],
+    "env": [
+      {
+        "name": "EULA",
+        "default": "TRUE",
+        "description": "EULA agreement",
+        "label": "EULA"
+      },
+      {
+        "name": "MOTD",
+        "default": "Vanilla Minecraft",
+        "description": "Message of the Day",
+        "label": "MOTD"
+      },
+      {
+        "name": "restart",
+        "default": "always",
+        "description": "restart",
+        "label": "restart"
+      }
+    ],
+    "command": [],
+    "devices": [],
+    "labels": [],
+    "sysctls": [],
+    "cap_add": []
+  }
+]
